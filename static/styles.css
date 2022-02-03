@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root {
+    --background-color: #f2f2f2;
+    --color-1: #c6c6c6;
+    --color-2: #4e5925;
+    --color-3: #92a64b;
+    --color-4: #ad8f77;
+    --acent-font: 'PT Serif', serif;
+    --border-slant: 4vw;
+}
+
+small{
+    color: #8b8c8c;
+    font-size: 20px;
+}
+
+div{
+    padding: 3rem;
+}
+
+h1{
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+h2{
+    font-weight: 300;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 83%;
+    height: 4.5vh;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+header > a{
+    padding: 0.5rem;
+    text-decoration: none;
+    font-family: var(--acent-font);
+    color: #8b8c8c;
+    font-weight: 500;
+    font-size: larger;
+}
+.accent-text{
+    color: var(--color-4);
+}
+
+.slated-div{
+    margin-right: -8px;
+    margin-left: -8px;
+    background-color: var(--color-1);
+    border-width: 0;
+    border-bottom-width: var(--border-slant);
+    border-top-width: var(--border-slant);
+    border-style: solid;
+    border-color: transparent;
+    clip-path: polygon(
+        0 calc(0% + var(--border-slant)),
+        100% 0,
+        100% calc(100% - var(--border-slant)),
+        0 100%
+    );
+}
+
+#top{
+    padding-top: 5vh;
+    padding-right: 0;
+    padding-left: 0;
+    display: grid;
+    place-items: center end;
+    grid-template-columns: 1fr auto;
+}
+#top>img{
+    margin-right: -8px;
+    height: 95vh;
+}
+
+#top>div{
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.small-img{
+    width: 250px;
+}
+
+#img-container-top{
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto;
+}
