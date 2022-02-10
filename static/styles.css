@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 :root {
     --background-color: #f2f2f2;
-    --color-1: #c6c6c6;
+    --color-1: #e4e4e4;
     --color-2: #4e5925;
     --color-3: #92a64b;
     --color-4: #ad8f77;
     --acent-font: 'PT Serif', serif;
     --border-slant: 4vw;
+}
+
+img{
+    border-radius: 5px;
+}
+
+p{
+    text-align: center;
 }
 
 small{
@@ -19,6 +27,7 @@ div{
 }
 
 h1{
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 50px;
@@ -26,6 +35,7 @@ h1{
 }
 
 h2{
+    text-transform: uppercase;
     font-weight: 300;
 }
 
@@ -42,7 +52,8 @@ header {
     background-color: white;
     position: fixed;
     top: 0;
-    width: 83%;
+    width: 100%;
+    z-index: 10;
     height: 4.5vh;
     display: grid;
     place-items: center;
@@ -51,6 +62,7 @@ header {
     padding-right: 10rem;
 }
 header > a{
+    text-transform: uppercase;
     padding: 0.5rem;
     text-decoration: none;
     font-family: var(--acent-font);
@@ -105,5 +117,141 @@ header > a{
 #img-container-top{
     display: grid;
     place-items: center;
+    grid-template-columns: auto auto auto;
+}
+
+#overview>div{
+    padding: 0;
+    display: grid;
+    place-items: center;
     grid-template-columns: auto auto;
+}
+
+#overview>div.button-container{
+    padding-top: 3vh;
+    grid-template-columns: none;
+}
+
+#team>div{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+}
+#team>div>img,
+#team>div>a>img{
+    width: 5vw;
+}
+
+.mapouter, .mapouter *, #location>div{
+    padding: 0;
+    border-radius: 5px;
+}
+
+.side-by-side{
+    display: grid;
+    grid-template-columns: auto auto;
+    place-content: center;
+}
+
+.side-by-side>.center-side{
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+
+#location-text>p{
+    font-size: larger;
+}
+
+#location-text{
+    display: grid;
+    place-items: center;
+}
+
+.carousel div{
+    padding: 0;
+}
+
+#look{
+    padding: 3rem;
+}
+
+#look .carousel-item{
+    width: 70vw;
+}
+
+.carousel{
+    display: grid;
+    place-items: center;
+}
+
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-me{
+    flex: 1 1 25vw;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    margin: 1vw;
+}
+.card-title{
+    font-weight: 100;
+    text-align: center;
+}
+
+.card-imag{
+    width: 20vw;
+    border-radius: 5px;
+}
+
+.cool-button{
+    color: var(--color-4);
+    padding: 10px;
+    text-decoration: none;
+    font-size: larger;
+    text-transform: uppercase;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--color-4);
+    border-radius: 5px;
+    font-weight: 500;
+    transition: color 0.2s;
+    transition-timing-function: ease;
+}
+
+.cool-button:hover{
+    background-color: var(--color-4);
+    color: var(--color-1);
+}
+
+.button-container{
+    width: 100%;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+
+.table{
+    border-style: solid;
+    border-radius: 10px!important;
+    box-shadow: black;
+    width: 50%!important;
+}
+
+#specifications{
+    display: grid;
+    place-items: center;
+}
+
+footer>div{
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    gap: 2vw;
 }
