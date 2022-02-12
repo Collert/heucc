@@ -54,12 +54,12 @@ header {
     top: 0;
     width: 100%;
     z-index: 10;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    height: 4.5vh;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 header > a{
     text-transform: uppercase;
@@ -68,16 +68,8 @@ header > a{
     font-family: var(--acent-font);
     color: #8b8c8c;
     font-weight: 500;
-    font-size: 20px;
-    flex: 1 1 150px;
-    display: grid;
-    place-items: center;
+    font-size: larger;
 }
-
-header > a:hover{
-    color: var(--color-3);
-}
-
 .accent-text{
     color: var(--color-4);
 }
@@ -107,7 +99,7 @@ header > a:hover{
     place-items: center end;
     grid-template-columns: 1fr auto;
 }
-#top-img{
+#top>img{
     margin-right: -8px;
     height: 95vh;
 }
@@ -119,22 +111,20 @@ header > a:hover{
 }
 
 .small-img{
-    flex: 0 1 150px;
-    padding: 0;
-    display: grid;
-    place-items: center;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.small-img>img{
-    width: 150px;
+    width: 250px;
 }
 
 #img-container-top{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto auto;
+}
+
+#overview>div{
+    padding: 0;
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto;
 }
 
 #overview>div.button-container{
@@ -143,22 +133,13 @@ header > a:hover{
 }
 
 #team>div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-#team>div>div{
-    flex: 1 1 150px;
-    padding: 0;
     display: grid;
     place-items: center;
-    margin: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
 }
-
-#team>div>div>a>img,
-#team>div>div>img{
+#team>div>img,
+#team>div>a>img{
     width: 5vw;
-    min-width: 70px;
 }
 
 .mapouter, .mapouter *, #location>div{
@@ -172,10 +153,17 @@ header > a:hover{
     place-content: center;
 }
 
-.side-by-side>div{
+.side-by-side>.center-side{
     padding: 0;
     display: grid;
     place-items: center;
+}
+
+@media(max-width:450px){
+    .side-by-side{
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+    }
 }
 
 #location-text>p{
@@ -197,7 +185,6 @@ header > a:hover{
 
 #look .carousel-item{
     width: 70vw;
-    min-width: 600px;
 }
 
 .carousel{
@@ -212,7 +199,7 @@ header > a:hover{
 }
 
 .card-me{
-    flex: 1 1 300px;
+    flex: 1 1 25vw;
     padding: 0;
     display: grid;
     place-items: center;
@@ -224,8 +211,8 @@ header > a:hover{
 }
 
 .card-imag{
-    width: 250px;
-    height: 150px;
+    width: 20vw;
+    border-radius: 5px;
 }
 
 .cool-button{
@@ -274,21 +261,4 @@ footer>div{
     padding-left: 20vw;
     padding-right: 20vw;
     gap: 2vw;
-}
-
-@media(max-width:600px){
-    .side-by-side{
-        grid-template-columns: none;
-        grid-template-rows: auto auto;
-        gap: 20px;
-    }
-    #top{
-        grid-template-columns: none;
-        margin-top: 20vh;
-    }
-    header{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 }
