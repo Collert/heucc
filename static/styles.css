@@ -276,6 +276,44 @@ footer>div{
     gap: 2vw;
 }
 
+#survey{
+    display: grid;
+    place-items: center;
+    max-height: 1500px;
+    transition: all 1s ease 0s;
+    overflow: hidden;
+    padding: 3rem;
+}
+
+.transparent *{
+    transition: all 1s ease 0s;
+    opacity: 0;
+}
+
+#survey>div>div>div{
+    padding: 5px;
+}
+
+#survey>div{
+    display: grid;
+    place-items: start;
+    
+
+}
+
+.form-check{
+    padding: 2px;
+}
+
+.form-check-input:checked{
+    background-color: var(--color-4)!important;
+    border-color: var(--color-4)!important;
+}
+
+#positiveFeedback,#negativeFeedback{
+    display: grid;
+    place-items: center;
+}
 @media(max-width:600px){
     .side-by-side{
         grid-template-columns: none;
