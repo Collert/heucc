@@ -279,7 +279,7 @@ footer>div{
 #survey{
     display: grid;
     place-items: center;
-    max-height: 1500px;
+    max-height: 1750px;
     transition: all 1s ease 0s;
     overflow: hidden;
     padding: 3rem;

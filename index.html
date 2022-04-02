@@ -291,19 +291,23 @@
         <form id="survey" class="slated-div" method="post" action="https://script.google.com/macros/s/AKfycbxYCeLBpgjd3tMfdKtEQxaCuzSwW-gFJGtRr-1DZv7N1LRGme0O5Zfog_zgup3GxOo/exec">
           <h1>Project survey</h1>
           <div>
+          <div style="width: 100%;">
+            <h4>Which neighborhood do you live in?</h4>
+            <input class="form-control" name="Community benefits feedback" id="extraComment">
+          </div>
           <div>
             <h4>What is your opinion on the Holy Eucharist Cathedral development?</h4>
             <div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Overall Rating" value="like" id="overallRating1">
+                <input class="form-check-input" type="radio" name="Overall Rating" value="very supportive" id="overallRating1">
                 <label class="form-check-label" for="overallRating1">
-                  I like it
+                  Very supportive
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Overall Rating" value="dislike" id="overallRating2">
+                <input class="form-check-input" type="radio" name="Overall Rating" value="supportive" id="overallRating2">
                 <label class="form-check-label" for="overallRating2">
-                  I dislike it
+                  Supportive
                 </label>
               </div>
               <div class="form-check">
@@ -312,21 +316,33 @@
                   Neutral
                 </label>
               </div>
-            </div>
-          </div>
-          <div>
-            <h4>What do you think about retaining and restoring the Holy Eucharist Cathedral?</h4>
-            <div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Cathedral Remodel Rating" value="like" id="cathedralRemodelRating1">
-                <label class="form-check-label" for="cathedralRemodelRating1">
-                  I like it
+                <input class="form-check-input" type="radio" name="Overall Rating" value="disapprove" id="overallRating4">
+                <label class="form-check-label" for="overallRating4">
+                  Disapprove
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="Cathedral Remodel Rating" value="dislike" id="cathedralRemodelRating2">
+                <input class="form-check-input" type="radio" name="Overall Rating" value="strongly disapprove" id="overallRating5">
+                <label class="form-check-label" for="overallRating5">
+                  Strongly disapprove
+                </label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4>What is your opinion retaining and restoring the Holy Eucharist Cathedral?</h4>
+            <div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="Cathedral Remodel Rating" value="very supportive" id="cathedralRemodelRating1">
+                <label class="form-check-label" for="cathedralRemodelRating1">
+                  Very supportive
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="Cathedral Remodel Rating" value="supportive" id="cathedralRemodelRating2">
                 <label class="form-check-label" for="cathedralRemodelRating2">
-                  I dislike it
+                  Supportive
                 </label>
               </div>
               <div class="form-check">
@@ -335,11 +351,27 @@
                   Neutral
                 </label>
               </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="Cathedral Remodel Rating" value="disapprove" id="cathedralRemodelRating4">
+                <label class="form-check-label" for="cathedralRemodelRating4">
+                  Disapprove
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="Cathedral Remodel Rating" value="strongly disapprove" id="cathedralRemodelRating5">
+                <label class="form-check-label" for="cathedralRemodelRating5">
+                  Strongly disapprove
+                </label>
+              </div>
             </div>
           </div>
           <div style="width: 100%;">
             <h4>Do you have any comments on the proposed building design?</h4>
             <textarea class="form-control" name="Design Comment" id="designComment"></textarea>
+          </div>
+          <div style="width: 100%;">
+            <h4>Do you have any comments on the proposed community benefits (affordable housing, daycare space)?</h4>
+            <textarea class="form-control" name="Community benefits feedback" id="amenitiesComment"></textarea>
           </div>
           <div style="width: 100%;">
             <h4>Do you have any additional feedback?</h4>
