@@ -331,3 +331,18 @@ footer>div{
         justify-content: center;
     }
 }
+
+#engage{
+    display: block;
+}
+
+#engage h2,
+#engage h3{
+    text-align: center;
+}
+
+.no{
+  padding: 0;
+  visibility: hidden;
+  height: 0;
+}

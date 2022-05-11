@@ -383,6 +383,22 @@
         </form>
         </main>
         <footer id="contact">
+          <div id="engage">
+            <h1 style="margin-bottom: 1rem;">Ways to engage</h1>
+            <h2>Open house</h2>
+            <div id="zoom">
+              <h3>When</h3>
+              <p>May 25th, 2022 @ 6PM</p>
+              <h3>Where</h3>
+              <p><a style="color: var(--color-2);" href="https://us02web.zoom.us/j/89219472773?pwd=MnJxZFBtclYvZm9QWG1YcU9GRVpaZz09">Virtual via Zoom</a><br><br>Meeting ID: 892 1947 2773<br>Passcode: 212117</p>
+            </div>
+            <div id="final">
+              <h3>When</h3>
+              <p>May 28th, 2022 @ 4-6PM</p>
+              <h3>Where</h3>
+              <p><a style="color: var(--color-2);" href="https://goo.gl/maps/hfnkBA4abpXNF7Yp7">Church hall Holy Eucharist Cathedral</a><br><br>501 4th Ave, New Westminster, BC V3L 1P3</p>
+            </div>
+          </div>
           <h1>Contact us</h1>
           <p>Any questions? Give us a call or send us an email!</p>
           <div>
@@ -396,46 +412,56 @@
         </footer>
   </body>
   <script>
-      var navbar = document.getElementById("navbar");
-      window.onscroll = function() {
-          if (window.pageYOffset > navbar.offsetTop){
-              navbar.style.borderBottom = "1px solid rgb(202 202 202)"
-          }
-          else {
-              navbar.style.borderBottom = "none"
-          }
-      };
-      const form = document.getElementById('survey');
-      window.addEventListener("load", function() {
-      form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        const data = new FormData(form);
-        const action = e.target.action;
-        fetch(action, {
-          method: 'POST',
-          body: data,
-        })
-        .then(() => {
-          
-        })
-      });
-      });
-      const positiveFeedback = document.querySelector("#positiveFeedback");
-      const negativeFeedback = document.querySelector("#negativeFeedback");
-      function formDone(){
-        if(document.querySelector("#overallRating2").checked || document.querySelector("#cathedralRemodelRating2").checked){
-          var message = "<h1>We are sorry to hear that</h1><p>Thank you for your feedback! We will carefully review it and make sure to do as much as possible to accomodate your needs.</p>";
+    const timezoneOffset = 7;
+    var today = new Date();
+    var final = new Date(Date.UTC(2022,4,28,18+timezoneOffset));
+    var zoom = new Date(Date.UTC(2022,4,25,18+timezoneOffset));
+    if (today > zoom){
+      document.querySelector("#zoom").classList.add("no");
+    }
+    if (today > final){
+      document.querySelector("#engage").classList.add("no");
+    }
+    var navbar = document.getElementById("navbar");
+    window.onscroll = function() {
+        if (window.pageYOffset > navbar.offsetTop){
+            navbar.style.borderBottom = "1px solid rgb(202 202 202)"
         }
-        else{
-          var message = "<h1>Thank you!</h1><p>We appreciate your feedback! Feedback like yours will push us forward to do even better.</p>";
+        else {
+            navbar.style.borderBottom = "none"
         }
-        form.style.maxHeight = "0px";
-          form.style.padding = "0";
-          setTimeout(() => {
-            form.innerHTML = message;
-            form.style.maxHeight = "300px";
-            form.style.padding = "3rem";
-          }, 1000);
-      };
+    };
+    const form = document.getElementById('survey');
+    window.addEventListener("load", function() {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = e.target.action;
+      fetch(action, {
+        method: 'POST',
+        body: data,
+      })
+      .then(() => {
+        
+      })
+    });
+    });
+    const positiveFeedback = document.querySelector("#positiveFeedback");
+    const negativeFeedback = document.querySelector("#negativeFeedback");
+    function formDone(){
+      if(document.querySelector("#overallRating2").checked || document.querySelector("#cathedralRemodelRating2").checked){
+        var message = "<h1>We are sorry to hear that</h1><p>Thank you for your feedback! We will carefully review it and make sure to do as much as possible to accomodate your needs.</p>";
+      }
+      else{
+        var message = "<h1>Thank you!</h1><p>We appreciate your feedback! Feedback like yours will push us forward to do even better.</p>";
+      }
+      form.style.maxHeight = "0px";
+        form.style.padding = "0";
+        setTimeout(() => {
+          form.innerHTML = message;
+          form.style.maxHeight = "300px";
+          form.style.padding = "3rem";
+        }, 1000);
+    };
   </script>
 </html>
