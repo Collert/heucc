@@ -192,6 +192,7 @@ header > a:hover{
 }
 
 #look{
+    padding-top: 5rem !important;
     padding: 3rem;
 }
 
