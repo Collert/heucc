@@ -16,7 +16,7 @@
             <a href="#overview">Overview</a>
             <a href="#team">Team</a>
             <a href="#location">Location</a>
-            <a href="#survey">Survey</a>
+            <!--<a href="#survey">Survey</a>-->
             <a href="#look">The look</a>
             <a href="#vision">Vision</a>
             <a href="#history">History</a>
@@ -289,7 +289,7 @@
                 </tbody>
               </table>
             </div>
-        <form id="survey" class="slated-div" method="post" action="https://script.google.com/macros/s/AKfycbxYCeLBpgjd3tMfdKtEQxaCuzSwW-gFJGtRr-1DZv7N1LRGme0O5Zfog_zgup3GxOo/exec">
+        <!--<form id="survey" class="slated-div" method="post" action="https://script.google.com/macros/s/AKfycbxYCeLBpgjd3tMfdKtEQxaCuzSwW-gFJGtRr-1DZv7N1LRGme0O5Zfog_zgup3GxOo/exec">
           <h1>Project survey</h1>
           <div>
           <div style="width: 100%;">
@@ -380,25 +380,9 @@
           </div>
         </div>
         <button type="submit" onclick="formDone()" class="cool-button">Submit</button>
-        </form>
+        </form>-->
         </main>
         <footer id="contact">
-          <div id="engage">
-            <h1 style="margin-bottom: 1rem;">Ways to engage</h1>
-            <h2>Open house</h2>
-            <div id="zoom">
-              <h3>When</h3>
-              <p>May 25th, 2022 @ 6PM</p>
-              <h3>Where</h3>
-              <p><a style="color: var(--color-2);" href="https://us02web.zoom.us/j/89219472773?pwd=MnJxZFBtclYvZm9QWG1YcU9GRVpaZz09">Virtual via Zoom</a><br><br>Meeting ID: 892 1947 2773<br>Passcode: 212117</p>
-            </div>
-            <div id="final">
-              <h3>When</h3>
-              <p>May 28th, 2022 @ 4-6PM</p>
-              <h3>Where</h3>
-              <p><a style="color: var(--color-2);" href="https://goo.gl/maps/hfnkBA4abpXNF7Yp7">Church hall Holy Eucharist Cathedral</a><br><br>501 4th Ave, New Westminster, BC V3L 1P3</p>
-            </div>
-          </div>
           <h1>Contact us</h1>
           <p>Any questions? Give us a call or send us an email!</p>
           <div>
@@ -412,16 +396,6 @@
         </footer>
   </body>
   <script>
-    const timezoneOffset = 7;
-    var today = new Date();
-    var final = new Date(Date.UTC(2022,4,28,18+timezoneOffset));
-    var zoom = new Date(Date.UTC(2022,4,25,18+timezoneOffset));
-    if (today > zoom){
-      document.querySelector("#zoom").classList.add("no");
-    }
-    if (today > final){
-      document.querySelector("#engage").classList.add("no");
-    }
     var navbar = document.getElementById("navbar");
     window.onscroll = function() {
         if (window.pageYOffset > navbar.offsetTop){
