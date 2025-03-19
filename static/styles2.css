@@ -97,6 +97,8 @@ header > a:hover{
         100% calc(100% - var(--border-slant)),
         0 100%
     );
+    overflow: hidden;
+    width: 99.5vw;
 }
 
 #top{
@@ -131,10 +133,15 @@ header > a:hover{
     width: 150px;
 }
 
-#img-container-top{
+#img-container-top {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+#img-container-top > img {
+    width: 50%;
 }
 
 #overview>div.button-container{
